@@ -1,0 +1,11 @@
+public class MyClass {
+  public static void main(String args[]) {
+    double MI2kmh = 1.6;
+    double KM = 24 * MI2kmh;
+    double calcKMH = KM / 1.676;
+    //1.676 being the time converted to 1 hour
+    //1 km = 1.6 miles
+
+    System.out.println(calcKMH);
+  }
+}
