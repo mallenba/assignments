@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class VolCyl {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    // Prompt the user for input
+    System.out.print("Enter radius: ");
+    double radius = input.nextDouble();
+    System.out.print("Enter length: ");
+    double len  = input.nextDouble();
+
+    double area = radius * radius * 3.14;
+    double volume = area * len;
+    System.out.println("Volume: " + volume + " Area: " + area);
+  }
+}
