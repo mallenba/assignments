@@ -1,0 +1,14 @@
+
+import java.util.Scanner;
+
+public class financeApp {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    // Prompt the user for input
+    System.out.print("Enter balance and annual interest rate: ");
+    double balance = input.nextDouble();
+    double annInterest = input.nextDouble();
+    
+    double interest = balance * (annInterest/1200);
+    System.out.println("The interest is " + interest );
+  }
