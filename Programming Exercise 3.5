@@ -1,0 +1,86 @@
+import java.util.Scanner;
+
+public class FindFutureDates {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int monday = 1;
+        int tuesday = 2;
+        int wednesday = 3;
+        int thursday = 4;
+        int friday = 5;
+        int saturday = 6;
+        int sunday = 0;
+        
+        String dayConvert = "";
+        String timePass = "";
+
+        System.out.print("Enter today's day of week (0 to 6): ");
+        int dayWeek = input.nextInt();
+        if (dayWeek == 1) {
+        	dayConvert = "Monday";
+        }
+        else if (dayWeek == 2) 
+        {
+        	dayConvert = "Tuesday";
+        }
+        else if (dayWeek == 3) 
+        {
+        	dayConvert = "Wednesday";
+        }
+        else if (dayWeek == 4) 
+        {
+        	dayConvert = "Thursday";
+        }
+        else if (dayWeek == 5) 
+        {
+        	dayConvert = "Friday";
+        }
+        else if (dayWeek == 6) 
+        {
+        	dayConvert = "Saturday";
+        }
+        else if (dayWeek == 0) 
+        {
+        	dayConvert = "Sunday";
+        }
+        
+        System.out.print("Enter the number of days elapsed since today: ");
+        int daysElapsed = input.nextInt();
+        daysElapsed = (dayWeek + daysElapsed) % 7;
+        if (daysElapsed == 1) {
+        	timePass = "Monday";
+        }
+        else if (daysElapsed == 2) 
+        {
+        	timePass = "Tuesday";
+        }
+        else if (daysElapsed == 3) 
+        {
+        	timePass = "Wednesday";
+        }
+        else if (daysElapsed == 4) 
+        {
+        	timePass = "Thursday";
+        }
+        else if (daysElapsed == 5) 
+        {
+        	timePass = "Friday";
+        }
+        else if (daysElapsed == 6) 
+        {
+        	timePass = "Saturday";
+        }
+        else if (daysElapsed == 0) 
+        {
+        	timePass = "Sunday";
+        }
+
+
+        
+        
+
+        System.out.println("Today is " + dayConvert + " and the future day is " + timePass);
+
+    }
+}
