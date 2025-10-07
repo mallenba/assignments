@@ -1,35 +1,28 @@
-public class monthGen {
-    public static void main(String[] args) {
-        String monthName = ("");
-        int monthNum = (int)(Math.random() * 12) + 1;
+import java.util.Scanner;
+ 
+ public class quadSolve {
+ public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
 
-        if (monthNum ==  1) 
-        
-        	monthName = " January";
-        else if (monthNum == 2)
-            monthName = " February";
-        else if (monthNum == 3)
-            monthName = " March";
-        else if (monthNum == 4)
-            monthName = " April";
-        else if (monthNum == 5)
-            monthName = " May";
-        else if (monthNum == 6)
-            monthName = " June";
-        else if (monthNum == 7)
-            monthName = " July";
-        else if (monthNum == 8)
-            monthName = " August";
-        else if (monthNum == 9)
-            monthName = " September";
-        else if (monthNum == 10)
-            monthName = " October";
-        else if (monthNum == 11)
-            monthName = " November";
-        else if (monthNum == 12)
-            monthName = " December";
-        
-    
-        System.out.println("Month is" + monthName);
+    System.out.print("Enter a, b, c: ");
+    double a = input.nextDouble();
+    double b = input.nextDouble();
+    double c = input.nextDouble();
+
+    double discrimCheck = b * b - 4 * a * c;
+
+
+    if (discrimCheck > 0) {
+        double r1 = (b*-1 + Math.pow(discrimCheck, 0.5)) / (2 * a);
+        double r2 = (b*-1  - Math.pow(discrimCheck, 0.5)) / (2 * a);
+        System.out.println("The equation has two roots: " + r1 + " and " + r2);
+    } 
+    	else if (discrimCheck == 0) {
+        double r1 = -b / (2 * a);
+        System.out.println("The equation has one root: " + r1);
+    		} 
+    		else {
+    			System.out.println("The equation has no real roots.");
     }
+   }
 }
