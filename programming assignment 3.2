@@ -1,35 +1,20 @@
-public class monthGen {
+  import java.util.Scanner;
+  
+  public class subtractQuiz {
     public static void main(String[] args) {
-        String monthName = ("");
-        int monthNum = (int)(Math.random() * 12) + 1;
+      int number1 = (int)(System.currentTimeMillis() % 10);
+     int number2 = (int)(System.currentTimeMillis() / 10 % 10);
+     int number3 = (int)(System.currentTimeMillis() / 10 % 10);
 
-        if (monthNum ==  1) 
-        
-        	monthName = " January";
-        else if (monthNum == 2)
-            monthName = " February";
-        else if (monthNum == 3)
-            monthName = " March";
-        else if (monthNum == 4)
-            monthName = " April";
-        else if (monthNum == 5)
-            monthName = " May";
-        else if (monthNum == 6)
-            monthName = " June";
-        else if (monthNum == 7)
-            monthName = " July";
-        else if (monthNum == 8)
-            monthName = " August";
-        else if (monthNum == 9)
-            monthName = " September";
-        else if (monthNum == 10)
-            monthName = " October";
-        else if (monthNum == 11)
-            monthName = " November";
-        else if (monthNum == 12)
-            monthName = " December";
-        
-    
-        System.out.println("Month is" + monthName);
-    }
-}
+     Scanner input = new Scanner(System.in);
+      System.out.print(
+      "What is " + number1 + " + " + number2 + " + " + number3 + "? ");
+      
+  
+      int answer = input.nextInt();
+      System.out.println(
+         number1 + " + " + number2 + " + " + number3 + " = " + answer + " is " +
+        (number1 + number2 + number3 == answer));
+     }
+  }
+            
