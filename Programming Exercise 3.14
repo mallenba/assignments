@@ -1,0 +1,25 @@
+import java.util.Scanner; 
+
+public class ChineseZodaiac {
+  public static void main(String[] args) {
+  	String coin2Name = "";	 
+	  
+    // Create a Scanner
+    Scanner input = new Scanner(System.in);
+    int headTail = (int) (Math.random() * 2);
+    if (headTail == 1) {
+    	 coin2Name = "tail";
+    }
+    else {
+    	 coin2Name = "head";
+    }
+    System.out.print("Guess head or tail? Enter 0 for head and 1 for tail: ");
+    int userGuess = input.nextInt();
+    if (userGuess == headTail) {
+    	System.out.println("Correct guess");
+    }
+    else {
+    	System.out.println("Sorry, it is a " + coin2Name);
+    }
+}
+}
