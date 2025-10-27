@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class geoGraph {
+
+  public static void main(String[] args) {
+	Double CharlotteLat = 35.2270869;
+	Double CharlotteLng = -80.8431267;
+
+	  
+	  Double AtlantaLat = 33.7489954;
+	  Double AtlantaLng = -84.3879824;
+
+	  Double SavannahLat = 32.0835407;
+	  Double SavannahLng = -81.0998342;
+
+	Double OrlandoLat = 28.5383355;
+	Double OrlandoLng = -81.3792365;
+
+	  
+    Scanner input = new Scanner(System.in);
+    
+    
+    
+    double GreatcircMiddle = 6371.01 * Math.acos(Math.sin(Math.toRadians(CharlotteLat)) * Math.sin(Math.toRadians(OrlandoLat))
+    		+ Math.cos(Math.toRadians(CharlotteLat)) * Math.cos(Math.toRadians(OrlandoLat)) *
+    		Math.cos(Math.toRadians(CharlotteLng - OrlandoLng)));
+
+    double Char2Sav = 6371.01 * Math.acos(Math.sin(Math.toRadians(CharlotteLat)) * Math.sin(Math.toRadians(SavannahLat))
+    		+ Math.cos(Math.toRadians(CharlotteLat)) * Math.cos(Math.toRadians(SavannahLat)) *
+    		Math.cos(Math.toRadians(CharlotteLng - SavannahLng)));
+    
+    double Sav2Orla = 6371.01 * Math.acos(Math.sin(Math.toRadians(OrlandoLat)) * Math.sin(Math.toRadians(SavannahLat))
+    		+ Math.cos(Math.toRadians(OrlandoLat)) * Math.cos(Math.toRadians(SavannahLat)) *
+    		Math.cos(Math.toRadians(OrlandoLng - SavannahLng)));
+    
+    double s = (GreatcircMiddle + Char2Sav + Sav2Orla) / 2.0; 
+
+
+    double area1 = Math.sqrt(s * (s - GreatcircMiddle) * (s - Char2Sav) * (s - Sav2Orla));
+    //TRIANGLE 1 RIGHT SIDE   
+    
+    
+
+    //TRIANGLE 2 LEFT SIDE
+    double Char2Atla = 6371.01 * Math.acos(Math.sin(Math.toRadians(CharlotteLat)) * Math.sin(Math.toRadians(AtlantaLat))
+    		+ Math.cos(Math.toRadians(CharlotteLat)) * Math.cos(Math.toRadians(AtlantaLat)) *
+    		Math.cos(Math.toRadians(CharlotteLng - AtlantaLng)));
+    
+    double Atla2Orla = 6371.01 * Math.acos(Math.sin(Math.toRadians(OrlandoLat)) * Math.sin(Math.toRadians(AtlantaLat))
+    		+ Math.cos(Math.toRadians(OrlandoLat)) * Math.cos(Math.toRadians(AtlantaLat)) *
+    		Math.cos(Math.toRadians(OrlandoLng - AtlantaLng)));
+    
+
+    double s2 = (GreatcircMiddle + Char2Atla + Atla2Orla) / 2.0; 
+    double area2 = Math.sqrt(s2 * (s2 - GreatcircMiddle) * (s2 - Char2Atla) * (s2 - Atla2Orla));    
+    
+    
+    double finalArea = area1 + area2;
+    System.out.println("area is " + finalArea);  
+  }
+}
