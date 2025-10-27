@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class java401 {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    
+    // this is the radius basically
+    System.out.print("Enter the length from the center to a vertex: ");
+    Double radius = input.nextDouble();
+    Double sideLen = 2 * radius * (Math.sin(3.14159/5));
+    Double area = (5 * (sideLen *sideLen)) / (4 * (Math.tan(3.14159/5)));
+    
+    
+    System.out.println("The area of the pentagon is " +  (int)(area * 100) / 100.0);
+
+  }
+}
