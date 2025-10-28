@@ -1,20 +1,19 @@
-import java.util.Scanner;
-
 public class geoPOINTS {
   public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
+
     
     Double radius = 40.0;
     
     
     double angle = Math.random() * (2 * (Math.PI));
-    System.out.println(angle);
+
     double angle2 = Math.random() * (2 * (Math.PI));
     double angle3 = Math.random() * (2 * (Math.PI));
     //angles that are converted to rad and are random 
 
     //get the points (formulas are based off the x = r*cos(alpha) y = r*sin(alpha)) and are in the book that i used
     double x = radius * Math.cos(angle);
+
     double y = radius * Math.sin(angle);
     
     double x2 = radius * Math.cos(angle2);
@@ -24,10 +23,16 @@ public class geoPOINTS {
     double y3 = radius * Math.sin(angle3);
     
     
-
+//convert back to degree for the angles i need to show when i print
+    angle = angle * 180/Math.PI;
+    angle2 = angle2 * 180/Math.PI;
+    angle3 = angle3 * 180/Math.PI;
     
     System.out.println("POINT ONE: " + x + "," + y);
+    System.out.println("ANGLE ONE: " + angle);
     System.out.println("POINT TWO: " + x2 + "," + y2);
+    System.out.println("ANGLE TWO: " + angle2);
     System.out.println("POINT THREE: " + x3 + "," + y3);
+    System.out.println("ANGLE THREE: " + angle3);
   }
 }
