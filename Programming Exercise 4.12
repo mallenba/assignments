@@ -6,17 +6,11 @@ import java.util.Scanner;
 
     System.out.print("Enter a hex digit: ");
     int answer = input.nextInt();
-    if (answer > 15 || answer < 0) {
-        System.out.print(answer + " is an invalid input");
-
-        
-    } 
-
-String theBinary = Integer.toHexString(answer);
+String theBinary = Integer.toBinaryString(answer);
 
 
 
-    			System.out.println("The hex value is " + theHex);
+    			System.out.println("The binary value is " + theBinary);
     
    }
 }
