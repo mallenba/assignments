@@ -1,0 +1,22 @@
+import java.util.Scanner;
+ 
+ public class answerProblem {
+ public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+
+    System.out.print("Enter a hex digit: ");
+    int answer = input.nextInt();
+    if (answer > 15 || answer < 0) {
+        System.out.print(answer + " is an invalid input");
+
+        
+    } 
+
+String theBinary = Integer.toHexString(answer);
+
+
+
+    			System.out.println("The hex value is " + theHex);
+    
+   }
+}
