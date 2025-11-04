@@ -1,0 +1,76 @@
+import java.util.Scanner;
+ 
+ public class answerProblem {
+ public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+
+    System.out.print("Enter a year: ");
+    int year = input.nextInt();
+    System.out.print("Enter a month: ");
+    String monthNum = input.next();
+    String monthName = "";
+    String days = "";
+        
+ 
+
+    if (monthNum.equals("Jan")) { 
+        
+    	monthName = " January";
+    	days = "31";
+    }
+       if (monthNum.equals("Feb")) {
+      
+        monthName = " February";
+        days = "28";
+      }
+       if (monthNum.equals("Mar")) {
+        monthName = " March";
+        days = "31";
+      }
+       if (monthNum.equals("Apr")) {
+    	  
+        monthName = " April";
+        days = "30";
+      }
+       if (monthNum.equals("May")) {
+        monthName = " May";
+        days = "31";
+ }
+       if (monthNum.equals("Jun")) {
+        monthName = " June";
+        days = "30";
+      }
+       if (monthNum.equals("Jul")) {
+        monthName = " July";
+        days = "31";
+ }
+       if (monthNum.equals("Aug")) {
+        monthName = " August";
+        days = "31";
+ }
+       if (monthNum.equals("Sep")) {
+        monthName = " September"; 
+        days = "30";
+      }
+       if (monthNum.equals("Oct")) {
+        monthName = " October";
+        days = "31";
+      }
+       if (monthNum.equals("Nov"))
+    		   {
+        monthName = " November";
+        days = "30";
+      }
+       if (monthNum.equals("Dec")) 
+    		  {
+        monthName = " December";
+        days = "31";
+      }
+       if (monthName.equals("")) 
+		  {
+    	   System.out.println(monthNum + " is not a correct month name  ");
+}
+    			System.out.println(monthNum + " " + year + " has " + days + " days");
+    
+   }
+}
