@@ -1,0 +1,22 @@
+import java.util.Scanner;
+ 
+ public class answerProblem {
+ public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+
+    System.out.print("Enter a decimal value (0 to 15): ");
+    int answer = input.nextInt();
+    if (answer > 15 || answer < 0) {
+        System.out.print(answer + " is an invalid input");
+
+        
+    } 
+
+String theHex = Integer.toHexString(answer);
+
+
+
+    			System.out.println("The hex value is " + theHex);
+    
+   }
+}
