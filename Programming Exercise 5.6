@@ -1,0 +1,35 @@
+
+ 
+ public class convertTable {
+ public static void main(String[] args) {
+
+	 int count = 0;
+	 int miles = 1;
+	 int count2 = 20;
+	 double km = 1.609;
+	 
+	 double miles2 = 12.430;
+	 int km2 = 20;
+	 System.out.println("Miles" + " Kilometers" + "|" + "Kilometers" + " Miles");
+
+	 
+    while (count < 10 && count2 <= 65 ) {
+    	System.out.printf(miles + " " + km + " |" + km2 + " " + miles2); 
+    	System.out.println();
+
+    	miles = miles + 1;
+    	km = miles * 1.609;
+
+    	
+        count++;
+        count2 = count2 + 5;
+        km2 = km2 + 5;
+    	miles2 = km2 / 1.609;
+    } 
+
+
+
+
+    
+   }
+}
