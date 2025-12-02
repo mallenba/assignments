@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class daysYear {
+
+
+	
+	public static int numberOfDaysInAYear(int year) {
+		int theYear = 365;
+		if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+		 theYear = 366;
+		}
+        return theYear;
+	}
+
+		
+		
+    
+
+    public static void main(String[] args) {
+    	int year = 2000;
+
+        System.out.println("Years " + " Total Days");
+        
+        while (year <= 2020) {
+        	int days = numberOfDaysInAYear(year);
+            System.out.println(year + " " + days);
+            
+            year++;
+        }
+        
+
+    }
+}
+
+
