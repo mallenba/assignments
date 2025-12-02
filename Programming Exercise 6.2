@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class sumAnswering {
+
+
+	
+	public static int sumDigits(long n) {
+	
+		int total = 0;
+		long senderNum = n;
+		//sendernum = number we send back
+		
+		while (senderNum != 0 ) {
+			
+			total = (int) (total + (senderNum % 10));
+			
+			senderNum = senderNum / 10;
+		}
+
+		return total;
+		
+		
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        // Prompt the user for input
+        System.out.print("Enter a number: ");
+        int theNum = input.nextInt();
+        System.out.println(sumDigits(theNum));
+    }
+    
+}
+
+
