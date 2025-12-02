@@ -1,0 +1,28 @@
+public class PentagonalNumbers {
+	//note: was slightly confused on this program so I might have misunderstood what to print/obtain
+
+	
+    public static int getPentagonalNumber(int n) {
+        return (n * (3 * n - 1)) / 2;
+    }
+
+    public static void main(String[] args) {
+         int Lines = 10;
+         int counter = 1;
+         while (counter<= 100) {
+            System.out.printf("%7d", getPentagonalNumber(counter));
+
+
+            if (counter % Lines == 0) {
+                System.out.println();
+            }
+            //checks to see if the end of the lines finishes to make a new row
+            
+            counter++;
+        }
+        System.out.println(getPentagonalNumber(2));
+    }
+    
+}
+
+
