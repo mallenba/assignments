@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+public class averageOverload {
+
+	public static double average(int[] array) {
+		double avgChecker = 0;
+		double Checker = array[1];
+		
+		
+		
+		//int path
+        for (int i = 0; i < array.length; i++) {
+        	
+
+        	 avgChecker = avgChecker + array[i];
+   
+        }
+        avgChecker = avgChecker / 10;
+        return avgChecker;
+	}
+	
+	
+	public static double average(double[] array) {
+		double avgChecker = 0;
+		double Checker = array[1];
+		
+		
+		
+		//double path
+        for (int i = 0; i < array.length; i++) {
+        	
+
+        	 avgChecker = avgChecker + array[i];
+   
+        }
+        avgChecker = avgChecker / 10;
+        return avgChecker;
+	}
+	
+
+		
+		
+    
+
+    public static void main(String[] args) {
+        int[]reader = new int[10];
+        double[]reader2 = new double[10];
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter 10 integers: ");
+
+        
+        for (int i = 0; i < reader.length; i++) {
+
+            reader[i] = input.nextInt();
+   
+        }
+        
+        
+        
+        double averageCalcd = average(reader);
+        System.out.println("The average for integers is " + averageCalcd);   
+        
+        System.out.print("Enter 10 double values: ");
+        for (int i = 0; i < reader.length; i++) {
+
+            reader2[i] = input.nextDouble();
+   
+        }
+        
+        double averageCalcd2 = average(reader2);
+        System.out.println("The average for double values is " + averageCalcd2);  
+       
+        
+
+        }
+
+           
+        
+
+
+}
+
+
+
