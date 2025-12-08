@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class reverser {
+
+
+	
+
+		
+		
+    
+
+    public static void main(String[] args) {
+        int[]reader = new int[10];
+        int h = 9;
+
+        Scanner input = new Scanner(System.in);
+        // Prompt the user for input
+        System.out.print("Read a number: ");
+        reader[0] = input.nextInt();
+        
+        
+           
+        for (int i = 1; i < reader.length; i++) {
+        	System.out.print("Read a number: ");
+            reader[i] = input.nextInt();
+ 
+                
+        }
+
+        while (h >= 0) {
+            System.out.println(reader[h]);
+ 
+                h--;
+        }
+
+        }
+
+           
+        
+
+
+}
+
