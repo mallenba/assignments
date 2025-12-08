@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class studentCalc {
+
+
+	
+
+		
+		
+    
+
+    public static void main(String[] args) {
+    	char grade = 'Z';
+        Scanner input = new Scanner(System.in);
+        // Prompt the user for input
+        System.out.print("Enter number of students: ");
+        int theNum = input.nextInt();
+        double[] scores = new double[theNum];
+        System.out.print("Enter " + theNum + " scores: ");
+        double best = scores[0];
+        
+           
+         //obtain the scores and then create the best variable from them 
+        for (int i = 0; i < theNum; i++) {
+            scores[i] = input.nextDouble();
+            
+            //obtain best 
+        	if (scores[i] > best) {
+        		best = scores[i];
+        	}
+                
+        }
+        
+        //len of array to use to compare it to the best grade. if it is less than x amount it becomes a b c etc
+        for (int i = 0; i < scores.length; i++) {
+
+            if (scores[i] >= best - 10) {
+                grade = 'A';
+            } else if (scores[i] >= best - 20) {
+                grade = 'B';
+            } else if (scores[i] >= best - 30) {
+                grade = 'C';
+            } else if (scores[i] >= best - 40) {
+                grade = 'D';
+            } else {
+                grade = 'F';
+            }
+            System.out.println("Student " + i + " score is " + scores[i] + " and grade is " + grade);
+            
+        }
+
+           
+        
+
+
+}
+}
