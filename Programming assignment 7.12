@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class reverseArray {
+
+
+
+	
+
+		
+		
+    
+
+    public static void main(String[] args) {
+    	int h = 9;
+        double[]reader = new double[10];
+        double[]reverser = new double[10];
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter 10 numbers: ");
+
+        
+        for (int i = 0; i < reader.length; i++) {
+
+            reader[i] = input.nextDouble();
+            
+            
+        }
+        
+        
+        for (int i = 0; i < reader.length; i++) {
+
+        	reverser[i] = reader[h];
+        	h--;
+            
+        }
+System.out.println("The reversal of the input is");
+        for (int i = 0; i < reader.length; i++) {
+
+        		System.out.print(reverser[i] + " ");
+            
+        }     
+        
+
+        }
+
+           
+        
+
+
+}
+
