@@ -1,1 +1,72 @@
- for (int i = 0; i < numberOfStudents; i++) {
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Comparator;
+
+
+public class SortStudents {
+	
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+
+        // Prompt user for the number of students
+        System.out.print("Enter the number of students: ");
+        int numberOfStudents = input.nextInt();
+        String[]reader = new String[numberOfStudents];
+        double[]readerScore = new double[numberOfStudents];
+        
+        
+        
+        
+        
+
+        //get student amount and then grab the student names/scores and dump them into diff arrays
+        for (int i = 0; i < reader.length; i++) {
+        	System.out.print("Enter a student name: ");
+            reader[i] = input.next();
+            
+            System.out.print("Enter a student score: ");
+            readerScore[i] = input.nextDouble();
+   
+        }
+        
+        //logic fors to compare them and reorganize via temp placeholders to take the index of the array and then dump to new area
+        for (int i = 0; i < readerScore.length - 1; i++) {
+            int maxIndex = i;
+
+            //for the area that is higher we remember it and store for later
+            for (int h = i + 1; h < readerScore.length; h++) {
+                if (readerScore[h] > readerScore[maxIndex]) {
+                    maxIndex = h;
+                }
+            }
+
+            //conversions for organizing the string and number to the new positions.
+            //i spent way too long to realize you do not need to make an extra array and can just do it via a temporary str and int
+            double temp = readerScore[i];
+            readerScore[i] = readerScore[maxIndex];
+            readerScore[maxIndex] = temp;
+            
+            
+            
+            String tempName = reader[i];
+            reader[i] = reader[maxIndex];
+            reader[maxIndex] = tempName;
+            
+            
+           
+        }
+        
+        
+        
+        
+      
+        System.out.println("Names in decreasing order of their scores are: ");
+        for (int i = 0; i < readerScore.length; i++) {
+        	System.out.println(reader[i] + " " + readerScore[i]);
+           
+        }
+    }
+    
+    
+}
