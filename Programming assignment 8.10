@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+
+public class PassArray {
+  public static void main(String[] args) {
+    int[][] m = getArray(); // Get an array
+
+    //prints array
+    for (int i = 0; i < m.length; i++) {
+        for (int h = 0; h < m[i].length; h++) {
+          System.out.print(m[i][h] + " ");
+        }
+        System.out.println();
+    }
+
+    System.out.println("The largest row index: " + row(m));    
+    System.out.println("The largest column index: " + col(m));       
+  }
+  
+
+  public static int[][] getArray() {
+    // Create a Scanner
+    Scanner input = new Scanner(System.in);
+    
+    // Enter array values
+    int[][] m = new int[4][4];
+    
+
+    for (int i = 0; i < m.length; i++)
+      for (int j = 0; j < m[i].length; j++)
+        m[i][j] = (int) Math.round(Math.random());
+
+    return m;
+  }
+
+  public static int col(int[][] m) {
+	    int maxColSeen = 0;
+
+	    int maxColIndex = 0;
+	    
+	    for (int column = 0; column < m[0].length; column++) {
+	    	int colAdd = 0;
+	      for (int row = 0; row < m.length; row++) {
+	    	  colAdd += m[row][column];
+	      }
+
+	      if (colAdd > maxColSeen) {
+	    	  maxColSeen = colAdd;
+	    	  maxColIndex = column;
+	    	
+	      }
+	    }
+
+	    return maxColIndex;
+	  }
+
+	
+  public static int row(int[][] m) {
+	    int maxRowSeen = 0;
+	    //rowseen is the row we check based on who had the highest counter
+	    int maxRowIndex = 0;
+	    int returnerRow = 0;
+	    //returnerRow the row we check when we eventually finish with the  row
+	    
+	    for (int row = 0; row < m.length; row++) {
+	    	int rowAdd = 0;
+	      for (int column = 0; column < m[row].length; column++) {
+	    	  rowAdd += m[row][column];
+	      }
+
+	      if (rowAdd > maxRowSeen) {
+	    	  maxRowSeen = rowAdd;
+	    	  maxRowIndex = row;
+	    	  returnerRow = row;
+	      }
+	    }
+
+	    return returnerRow;
+	  }
+}
+
+
+
+
+
